@@ -1,4 +1,5 @@
 ls --> list the files/directory
+ls -ltr--> list with permessions they have.
 mkdir <name> --> make/create directory
 cd <name> --> change to that given directory 
 touch <filename.extension> --> creates a filename, you can also mention multiple filenames to create multiple files.
@@ -50,7 +51,7 @@ date --> tells you the current date.
 
 Vim: It is similar to nano, you could also use vim to edit the file.
 
-vi <file> --> Inside the esiting file you have to start with I and then after finishing you have to press escape, then a colon symbol appers.
+vi <file> --> Inside the esiting file you have to start with I and then after finishing you have to press escape + I = Insert mode and so you could type something, then a colon symbol appers.
 
 qa! --> exit without saving.
 wq --> save and exit.
@@ -68,5 +69,47 @@ wget --> download the files.
 wget https://www.python.org/ftp --> It download the package/image that is given in link.
 
 
+Difference between bash and dash?
 
+#!/bin/sh
+#!/bin/bash
+#!/bin/dash
+#!/bin/ksh
+
+
+./ <file.ext> --> to execute a file
+sh <file.ext> --> file gets executed, but you will get denied as it doesn't know who has access to execute file.
+
+So we use command line, chmod this grants permessions.
+ch --> change + mod 
+
+What are permessions ?
+It's basically divide into 3 parts
+1) root (SU)
+2) which group
+3) What are your permessions
+
+Using the numbers we categorize this permessions:
+7 --> magic number (read, write and execute)
+
+4 --> read
+2 --> write
+1 --> execute
+
+Ex: chmod 444 (root 4, group 4, everyone 4)
+    chmod 777 (root (read, write,execute); group (read, write,execute); everyone (read, write,execute))
+
+User:  
+Group: 
+Everyone: 
+
+To monitor the CPU/RAM how do we identify ?
+
+for CPU you can use --> NPROC
+for RAM you could use --> Free
+
+Insted of there you could use TOP command.
+It gives you all the informations of all processes, how much memory is used.
+
+TOP --> which all processes are running on your account.
 
