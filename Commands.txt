@@ -113,3 +113,88 @@ It gives you all the informations of all processes, how much memory is used.
 
 TOP --> which all processes are running on your account.
 
+df --> For printing disk space
+free --> for getting free memory on disk
+nproc --> Analyzing no of cpu's.
+
+To efficently write the script, we have 2 options 
+1) Use echo command - It gived more info of the printing details
+
+Ex: We have command df that displays disk space, in the shell script we could give it as 
+
+echo "Print disk space"
+df -h 
+
+Ex2: We have command free/nproc displays the free memory in the disk/displays no-of CPU running.
+
+echo "print the memory"
+free -g
+
+echo "prnit the no-of CPU"
+nproc 
+
+Using echo statement is not feasible all teh times.
+
+2) So we use set execute mode in debug mode (set -x)
+
+It will print the output eith the comment of each output. It will basically show the command and output.
+it is always better use mix of set command and echo command.
+
+you need to always write the comments in the script to have more understanding of the file.
+-------------------------------------------------------------------------------------------------------------------------
+
+How do you find how much processes are running 
+
+ps -ef --> provides the list of all processes 
+ps -ef | grep "amazon" --> Filters all the processes having amazon in the list.
+getmeusernames | grep "sai" --> From the script getmeusernames, grep command hrlps in filtering the names eho has sai.
+| --> sends the output of first command to second command
+
+
+SCENARIO:
+
+I will run a command date in terminal and | that to echo "today date is", what is the output and why ?
+
+The o/p of the first command date is it gives the date 
+the o/p of second command date | echo "the date is"  --> It only fives o/p as today date is because date is default command for shell scripting.
+And also for any chnanesla such as stdin, stdout, stderr  --> Pipe command only takes the information from o/p from the previous command. If the information is send to stdin the pipe doesn't recive the info and so will not display the o/p.
+
+awk --> It is powerful command, which is pattern scanning and processing language.
+Ex: If you want to get only process ID's or somthing, or column we can use AWK command, what it does is it filter out the information.
+
+GREP VS AWK:
+
+Grep provides you the list of all columns/everything ftom given text.
+AWK provides you the only required info, to retrive all the required information.
+
+grep name <filename> -->  gives the string of words, which has text = "name"
+
+If the example is: My name is Harsha.
+grep name <filename> | awk -F " " '{print $4} --> It gives output as Harsha
+
+When you write any sh file, you will mention below things mandatory.
+
+#!/bin/bash
+
+############
+
+META DATA
+
+Author: 
+Date:
+Description:
+Version:
+######################
+
+set -x #debug mode
+
+set -e #It exits the script, when there is an error.
+If we have errorn in line 4 and we havent written the command set -e, it runs everything although there is error.
+Lets assume we have a hierarcy of create a user, create a file and then add that username to the file. 
+The above mentioned things should be in order, if something is missing and the remaining goes wrong because it would be depending onthat. So there won't be any point of writing script, so when there is an error we assume it to quit and help us.
+The only drwaback is, it doesn't work along with pipe command, so we also need to set a command for that for efficent working along with pipe command.
+It basically checks the last command 
+ffghffhfjf | echo --> script gets passed
+fgfgdhjjdgf | echo | jshdufyudch --> script gets failed.
+
+set -o #pipefail.
