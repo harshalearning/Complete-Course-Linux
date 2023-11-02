@@ -1,0 +1,72 @@
+ls --> list the files/directory
+mkdir <name> --> make/create directory
+cd <name> --> change to that given directory 
+touch <filename.extension> --> creates a filename, you can also mention multiple filenames to create multiple files.
+nano <filename.ext> --> open a GUI kind for editing the file, if the file doesn't exist it can also create a file.
+cat <filename.ext> --> reads the content in the filename
+cd ../ --> moves one step backward from present directory.
+cd ../ ../ --> moves 2 steps behind to the present path.
+cd --> comes to home directory from any path.
+rm <filename.ext> --> removes that specific file.
+rmdir <directory/folder> --> deletes the empty directory.
+rmdir -r <directory> --> removes the directory, if it has some files inside it.
+cp <file> <directory>/ --> copies file into the mentioned directory.
+mv <file> <directory>/ --> moves the file into mentioned directory.
+mv <file> ~/ --> Moves the file to the homedirctories into all the directories
+mv <file> ~/<folder>/ --> Moves the file to that specific directory in home.
+clear --> clears all the contents
+mv <file> <newfile> --> moves the file into newfile and then clears the old file as it renamed.
+man mv --> Gives the manual command for any command, here we used for mv command.
+
+How to install Packages:
+
+apt is package manager for Ubuntu. apt-get 
+For Amazon linuc CLI "YUM" is used.
+
+In Ubuntu: 
+
+apt install <packageName> --> Installs the package from your account.
+sudo apt install <Packagename> --> Installs it using the root account.
+sudo apt update --> Updates all the pacakges we have
+sudo apt upgrade --> Upgrades all the packages we have
+sudo apt purge --> Delete any of the pacakges.
+sudo apt purge git --> Deletes the git package.
+
+Connect to an EC2 instance:
+
+From terminal:
+
+ssh -i harsha.pem ubuntu@public_IP_address (helps us to remote login into server from local machine)
+
+
+pwd --> present working directory.
+whoami --> current user
+sudo su --> current user to root user 
+history --> gives all the commands used in active terminal.
+git --version: gives the version of git
+which docker --> Gives the path of docker
+sudo apt update git --> updates git
+date --> tells you the current date.
+
+Vim: It is similar to nano, you could also use vim to edit the file.
+
+vi <file> --> Inside the esiting file you have to start with I and then after finishing you have to press escape, then a colon symbol appers.
+
+qa! --> exit without saving.
+wq --> save and exit.
+
+NETWORK COMMANDS:
+
+ping google.com --> check if particular site is up or not. Checks if there is connection between servers.
+ip addr --> gives our IP address.
+nslookup google.com --> gives the data of name, ip address.
+
+curl https://www.google.com --> we can see the whole page, in html foem.
+curl https://aws.amazon.com --> Gives the whole page, in html form, to have information and context of it.
+
+wget --> download the files.
+wget https://www.python.org/ftp --> It download the package/image that is given in link.
+
+
+
+
