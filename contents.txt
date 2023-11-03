@@ -1,0 +1,33 @@
+Introduction 
+How to create a file ?
+How to list the files and folders ?
+man command in linux ?
+(vi/vim) - How to write a file in Linux?
+nano command in Linux?
+Difference between touch and vim? 
+How to copy content in Linux?
+ #!/bin/bash  vs  #!/bin/sh?
+What is the difference between sh, ksh, bash and dash?
+How to use Insert command in Linux?
+echo command in Linux?
+How to execute a Shell Script?
+chmod command and how to use?
+How to check the history of commands?
+How to create folders?
+How to change the directory in linux?
+How to check CPU and RAM of a Linux Machine?
+What is "Top" command and why is it used?
+How to analyze the health of a Node ?
+Commands for Node health
+Using Print/echo Statements to improve readibility
+set -x command to run script in debug mode, set -e, set -o
+grep and pipe commands to filter the output.
+IMPORTANT INTERVIEW QUESTION on PIPE.
+AWK command
+grep vs AWK ?
+wget command and use-cases ?
+CURL vs WGET
+find command
+sudo and su commands
+if else
+for loops
