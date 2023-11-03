@@ -198,3 +198,66 @@ ffghffhfjf | echo --> script gets passed
 fgfgdhjjdgf | echo | jshdufyudch --> script gets failed.
 
 set -o #pipefail.
+
+logfile --> gives the details of error, you could also mix and use pipe command along with it.
+
+In some cases, as we will be having thousands of errors coming every minute, everything couldn't be in console and we use storages for this, on the platforms such as AWS S3, Azure block storageetc.
+So with the help of link, we can pull that to our terminal. We could retrive those using curl command.
+
+curl <url> --> brings the all data from the provided link.
+curl <url> | gerp error --> get all the details having text error.
+
+wget, also does the same which downloads the log file, to our directory, so you have to read that file and grep the text.
+wget<url> --> The file of log file gets downloaded from the given URL.
+wget <url> --> ls --> file name from URL.
+cat <filename> | grep error --> Now, it gives the list of all things which has tect error from the file.
+
+We could also use curl command as a substitute for POSTMAN.
+
+SCENARIO:
+
+Difference between CURL & WGET ?
+
+
+find / -name pam.d --> It gets failed because, you will not have access to do that, you have to do it from root user.
+sudo find / -name pam.d --> as a root user it chackes the given file name from all the directories present.
+
+LOOPS:
+
+IF, IFELSE, FOR -
+
+Please look into image.png for more info
+
+****************************
+if [expression]
+then
+      print this
+      here
+
+else 
+      Print another 
+fi
+****************************
+
+ex: 
+
+a=4
+b=5
+
+if [ $a > $b ]
+
+then 
+    echo " a is greater than b"
+
+else 
+    echo " b is greater than a"
+
+==================================================================================================================
+FOR loop: We use it to perform some action continiously. 
+
+for i in {1.100}; do echo $1; done
+
+
+TRAP COMMAND:
+
+It is used to trap signals, 
